@@ -1,0 +1,11 @@
+# 1. pick one base image for Python application
+
+# 2. set working directory
+
+# 3. copy source code to the working directory
+
+# 4. install packages based on requirements.txt
+
+# 5. define the exposed port (if applicable)
+
+# 6. define the command that runs the app

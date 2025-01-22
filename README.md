@@ -129,6 +129,34 @@ More details could be found in:
 
 > Requirements: 
 >
-> 1. build a container that runs our developed Python flask web application.
+> 1. build a container that runs our developed Python flask web application in the `python` dir.
 > 2. run and verify it from the browser.
+
+based on:
+
+``` docker
+# 1. pick one base image for Python application
+
+# 2. set working directory
+
+# 3. copy source code to the working directory
+
+# 4. install packages based on requirements.txt
+
+# 5. define the exposed port (if applicable)
+
+# 6. define the command that runs the app
+```
+
+Then, build the image with:
+
+``` bash
+docker build -t my-python-app .
+```
+
+Run it with:
+
+``` bash
+docker run my-python-app
+```
 
