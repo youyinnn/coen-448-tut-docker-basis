@@ -15,6 +15,7 @@
 <summary>Video: Docker concepts - What is a container? </summary>
 <iframe width="896" height="488" src="https://www.youtube.com/embed/W1kWqFkiu7k" title="Docker concepts - What is a container?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </details>
+
 >  Simply put, containers are isolated processes for different applications with different environment setups running on top of the Docker. 
 >
 >  **It is like the running application on our computer.**
@@ -25,6 +26,7 @@
 <summary>Video: Docker concepts - What is an image? </summary>
 <iframe width="896" height="488" src="https://www.youtube.com/embed/NyvT9REqLe4" title="Docker concepts - What is an image?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </details>
+
 > Simply put, images are immutable files that contain all required supporting libraries, packages, contents, and your apps and define how to run your apps.
 >
 > **It is like software installers (we also call it image back in the day) to be installed on our computer.**
