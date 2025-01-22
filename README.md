@@ -1,15 +1,13 @@
 ### Docker Basis
 
->Docker (Quote from AWS):
+> Docker (Quote from AWS):
 >
->1. It is a software platform that allows you to **<u>build, test, and deploy</u>** consistent applications **<u>quickly</u>**.
->2. It packages software into **<u>standardized units</u>** called [containers](https://aws.amazon.com/containers/) that have everything the software needs to run, including libraries, system tools, code, and runtime. 
+> 1. It is a software platform that allows you to **<u>build, test, and deploy</u>** consistent applications **<u>quickly</u>**.
+> 2. It packages software into **<u>standardized units</u>** called [containers](https://aws.amazon.com/containers/) that have everything the software needs to run, including libraries, system tools, code, and runtime.
 >
->**It is like the operating system on our computer.**
+> **It is like the operating system on our computer.**
 
 ![image1-from-aws](./image//image-20250121115255459 PM.png)
-
-
 
 #### 1. What is a container?
 
@@ -21,8 +19,6 @@
 >
 >  **It is like the running application on our computer.**
 
-
-
 #### 2. What is an image?
 
 <details>
@@ -33,8 +29,6 @@
 >
 > **It is like software installers (we also call it image back in the day) to be installed on our computer.**
 
-
-
 #### 3. What is a registry?
 
 It is an online resource where you can upload your defined images and download them from anywhere.
@@ -42,8 +36,6 @@ It is an online resource where you can upload your defined images and download t
 You can push your images and pull them later.
 
 Docker uses the [Docker Hub](https://hub.docker.com/?_gl=1*r6gvh7*_gcl_au*MTc4NTExMTkxNC4xNzM2NDc3NjU1*_ga*MTQwMTQ4NDU2MC4xNzM2MTg5MDQ0*_ga_XJWPQMJYHQ*MTczNzUxOTk5MS44LjEuMTczNzUyNDEzMC41OS4wLjA.) by default as a public image registry.
-
-
 
 ### A docker helloWorld
 
@@ -53,7 +45,7 @@ Docker uses the [Docker Hub](https://hub.docker.com/?_gl=1*r6gvh7*_gcl_au*MTc4NT
 
 3. [Run the hello-world container](https://docs.docker.com/get-started/introduction/get-docker-desktop/):
 
-   ``` bash
+   ```bash
    docker run -d -p 8080:80 docker/welcome-to-docker
    ```
 
@@ -63,7 +55,7 @@ Docker uses the [Docker Hub](https://hub.docker.com/?_gl=1*r6gvh7*_gcl_au*MTc4NT
 
    Outputs:
 
-   ``` bash
+   ```bash
    > docker run -d -p 8080:80 docker/welcome-to-docker
    Unable to find image 'docker/welcome-to-docker:latest' locally
    latest: Pulling from docker/welcome-to-docker
@@ -82,8 +74,6 @@ Docker uses the [Docker Hub](https://hub.docker.com/?_gl=1*r6gvh7*_gcl_au*MTc4NT
 
 4. Visit http://localhost:8080.
 
-
-
 ### How to build an image?
 
 We can take a look at the "docker/welcome-to-docker" project on [GitHub](https://github.com/docker/welcome-to-docker/blob/main/Dockerfile).
@@ -92,7 +82,7 @@ To build an image, we need to define a **Dockerfile**.
 
 In this case:
 
-``` dockerfile
+```dockerfile
 # Start your image with a node base image for javascript environment
 FROM node:18-alpine
 
@@ -123,18 +113,16 @@ More details could be found in:
 1. [Get Started - Writing a Dockerfile](https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/)
 2. [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
 
-
-
 ### Write our own image
 
-> Requirements: 
+> Requirements:
 >
 > 1. build a container that runs our developed Python flask web application in the `python` dir.
 > 2. run and verify it from the browser.
 
 based on:
 
-``` docker
+```docker
 # 1. pick one base image for Python application
 
 # 2. set working directory
@@ -150,13 +138,12 @@ based on:
 
 Then, build the image with:
 
-``` bash
+```bash
 docker build -t my-python-app .
 ```
 
 Run it with:
 
-``` bash
+```bash
 docker run my-python-app
 ```
-
